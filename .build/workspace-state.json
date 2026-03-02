@@ -1,0 +1,33 @@
+{
+  "object" : {
+    "artifacts" : [
+      {
+        "kind" : {
+          "xcframework" : {
+
+          }
+        },
+        "packageRef" : {
+          "identity" : "applovin-max-sdk-ios",
+          "kind" : "root",
+          "location" : "/Users/chengxiaoyu/Documents/MyWorkSpace/work/AppLovin-MAX-SDK-iOS",
+          "name" : "AppLovin-MAX-SDK-iOS"
+        },
+        "path" : "/Users/chengxiaoyu/Documents/MyWorkSpace/work/AppLovin-MAX-SDK-iOS/.build/artifacts/applovin-max-sdk-ios/AppLovinSDK/AppLovinSDK.xcframework",
+        "source" : {
+          "checksum" : "a7f6701b24f67c55a0beabfcc06b31660590dceb410e3e6bae67b4fd4d817349",
+          "type" : "remote",
+          "url" : "https://artifacts.applovin.com/ios/com/applovin/applovin-sdk/AppLovinSDK-13.6.0.xcframework.zip"
+        },
+        "targetName" : "AppLovinSDK"
+      }
+    ],
+    "dependencies" : [
+
+    ],
+    "prebuilts" : [
+
+    ]
+  },
+  "version" : 7
+}
