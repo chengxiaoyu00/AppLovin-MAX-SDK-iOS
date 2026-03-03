@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -37,6 +37,8 @@
 		37C4D0E8233D834900096894 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C4D0E7233D834900096894 /* main.swift */; };
 		6254AC69286A5741000D3298 /* ALMAXMRecTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6254AC68286A5741000D3298 /* ALMAXMRecTableViewController.swift */; };
 		6254AC6D286A5E90000D3298 /* ALMAXMRecTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6254AC6C286A5E90000D3298 /* ALMAXMRecTableViewCell.swift */; };
+		65BC495C2F5677C1008B6631 /* AppLovinMediationGoogleAdapter in Frameworks */ = {isa = PBXBuildFile; productRef = 65BC495B2F5677C1008B6631 /* AppLovinMediationGoogleAdapter */; };
+		65BC495E2F5677C1008B6631 /* AppLovinSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 65BC495D2F5677C1008B6631 /* AppLovinSDK */; };
 		77AAC0F727D806820060499A /* ALMAXManualNativeLateBindingAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AAC0F627D806820060499A /* ALMAXManualNativeLateBindingAdViewController.swift */; };
 		77B6F43D279B51F70063F81D /* ALMAXManualNativeAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B6F43A279B51F70063F81D /* ALMAXManualNativeAdViewController.swift */; };
 		77B6F43E279B51F70063F81D /* ALMAXTemplateNativeAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B6F43B279B51F70063F81D /* ALMAXTemplateNativeAdViewController.swift */; };
@@ -97,6 +99,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F59AFEA2C1B64BF96C40680 /* Pods_AppLovin_MAX_Demo_App___Swift.framework in Frameworks */,
+				65BC495E2F5677C1008B6631 /* AppLovinSDK in Frameworks */,
+				65BC495C2F5677C1008B6631 /* AppLovinMediationGoogleAdapter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +333,9 @@
 				Base,
 			);
 			mainGroup = 3763B22A23357C4B00E49783;
+			packageReferences = (
+				65BC495A2F5677C1008B6631 /* XCLocalSwiftPackageReference "../../AppLovin-MAX-SDK-iOS" */,
+			);
 			productRefGroup = 3763B23423357C4B00E49783 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -383,9 +390,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AppLovin MAX Demo App - Swift/Pods-AppLovin MAX Demo App - Swift-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AppLovin MAX Demo App - Swift/Pods-AppLovin MAX Demo App - Swift-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -400,9 +411,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AppLovin MAX Demo App - Swift/Pods-AppLovin MAX Demo App - Swift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AppLovin MAX Demo App - Swift/Pods-AppLovin MAX Demo App - Swift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -671,6 +686,24 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		65BC495A2F5677C1008B6631 /* XCLocalSwiftPackageReference "../../AppLovin-MAX-SDK-iOS" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../../AppLovin-MAX-SDK-iOS";
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		65BC495B2F5677C1008B6631 /* AppLovinMediationGoogleAdapter */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppLovinMediationGoogleAdapter;
+		};
+		65BC495D2F5677C1008B6631 /* AppLovinSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppLovinSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3763B22B23357C4B00E49783 /* Project object */;
 }
