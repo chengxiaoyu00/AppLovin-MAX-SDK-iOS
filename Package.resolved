@@ -29,6 +29,15 @@
         }
       },
       {
+        "package": "FBAudienceNetwork",
+        "repositoryURL": "https://github.com/facebook/FBAudienceNetwork.git",
+        "state": {
+          "branch": null,
+          "revision": "0b7bd807fff993055838e6d6a410eddf590c09ac",
+          "version": "6.21.1"
+        }
+      },
+      {
         "package": "KSCrash",
         "repositoryURL": "https://github.com/kstenerud/KSCrash",
         "state": {
