@@ -9,7 +9,7 @@ DerivedData/
 # Swift Package Manager
 .build/
 .swiftpm/
-Package.resolved
+
 ## Various settings
 *.pbxuser
 !default.pbxuser
@@ -72,6 +72,9 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+
+# Claude Code
+.claude/
 
 # Idea
 .idea
