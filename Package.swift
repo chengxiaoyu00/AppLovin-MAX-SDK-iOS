@@ -16,7 +16,7 @@ let package = Package(
         .library(name: "AppLovinMediationMintegralAdapter",        targets: ["AppLovinMediationMintegralAdapter"]),
         .library(name: "AppLovinMediationInMobiAdapter",           targets: ["AppLovinMediationInMobiAdapter"]),
         .library(name: "GoogleAppLovinAdapter",                    targets: ["GoogleAppLovinAdapter"]),
-        .library(name: "GoogleMintegralAdapterTarget",             targets: ["MintegralAdapterTarget"]),
+        .library(name: "GoogleMintegralAdapterTarget",             targets: ["GoogleMintegralAdapterTarget"]),
         .library(name: "AppLovinMediationPangleAdapter",             targets: ["AppLovinMediationPangleAdapter"]),
         .library(name: "PangleAdapterTarget",         targets: ["PangleAdapterTarget"]),
         .library(name: "MetaAdapterTarget", targets: ["MetaAdapterTarget"]),
@@ -143,7 +143,7 @@ let package = Package(
             ]
         ),
         .target(
-            name: "MintegralAdapterTarget",
+            name: "GoogleMintegralAdapterTarget",
             dependencies: [
                 .target(name: "MintegralAdapter"),
                 .product(name: "MintegralAdSDK", package: "MintegralAdSDK-Swift-Package"),
@@ -177,7 +177,7 @@ let package = Package(
                 .product(name: "FBAudienceNetwork", package: "FBAudienceNetwork"),
                 .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
             ],
-            path: "MetaAdapterTarget",
+            path: "Sources/MetaAdapterTarget",
             linkerSettings: [
                 .linkedFramework("AppTrackingTransparency")
             ]
@@ -189,7 +189,7 @@ let package = Package(
                 .product(name: "VungleAdsSDK", package: "VungleAdsSDK-SwiftPackageManager"),
                 .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
             ],
-            path: "LiftoffMonetizeAdapterTarget"
+            path: "Sources/LiftoffMonetizeAdapterTarget"
         ),
         .binaryTarget(
             name: "LiftoffMonetizeAdapter",
@@ -219,11 +219,6 @@ let package = Package(
             url:
                 "https://dl.google.com/googleadmobadssdk/mediation/ios/mintegral/MintegralAdapter-8.0.7.0.zip",
             checksum: "d232222c8b9cc382cd934a02cf66e8ed81c135ae29ecfa45e87397f063f7e318"
-        ),
-        .binaryTarget(
-           name: "VungleAdsSDK",
-           url: "https://vungle2-cdn-prod.s3.amazonaws.com/sdks/ios/SwiftPackageManager/VungleAds-7.7.1.zip",
-           checksum: "dca1a9084f4175ab2485046eb140c831b38cb6a35e36212b72691d119effbf75"
         ),
         .binaryTarget(
             name: "AppLovinMediationByteDanceAdapter",
