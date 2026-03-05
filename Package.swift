@@ -15,7 +15,7 @@ let package = Package(
         .library(name: "AppLovinMediationMintegralAdapter",        targets: ["AppLovinMediationMintegralAdapter"]),
         .library(name: "AppLovinMediationInMobiAdapter",           targets: ["AppLovinMediationInMobiAdapter"]),
         .library(name: "GoogleAppLovinAdapter",                    targets: ["GoogleAppLovinAdapter"]),
-        .library(name: "GoogleMintegralAdapter",                   targets: ["MintegralAdapter"]),
+        .library(name: "GoogleMintegralAdapterTarget",             targets: ["MintegralAdapterTarget"]),
     ],
     dependencies: [
         .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", from: "13.0.0"),
