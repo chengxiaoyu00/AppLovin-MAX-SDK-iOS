@@ -155,7 +155,6 @@ let package = Package(
               name: "AppLovinMediationPangleAdapter",
               dependencies: [
                 .target(name: "AppLovinSDK"),
-                .target(name: "AppLovinMediationByteDanceAdapter"),
                 .product(name: "AdsGlobalPackage", package: "AdsGlobalPackage"),
               ],
               path: "Sources/ByteDance/ByteDanceAdapter",
@@ -219,11 +218,6 @@ let package = Package(
             url:
                 "https://dl.google.com/googleadmobadssdk/mediation/ios/mintegral/MintegralAdapter-8.0.7.0.zip",
             checksum: "d232222c8b9cc382cd934a02cf66e8ed81c135ae29ecfa45e87397f063f7e318"
-        ),
-        .binaryTarget(
-            name: "AppLovinMediationByteDanceAdapter",
-            url: "https://artifacts.applovin.com/ios/com/applovin/mediation/bytedance-adapter/AppLovinMediationByteDanceAdapter-7.9.0.7.0.zip",
-            checksum: "fbbaa7dfd2a4ac6046acb37d526f70786595ad048ca2a1491bfd36166c6e7345"
         ),
         .binaryTarget(
             name: "PangleAdapter",
