@@ -195,7 +195,7 @@ let package = Package(
             name: "LiftoffMonetizeAdapter",
             url:
                 "https://dl.google.com/googleadmobadssdk/mediation/ios/liftoffmonetize/LiftoffMonetizeAdapter-7.7.1.0.zip",
-            checksum: "40608d891d891ad285efcc5e8f88f6f6cf92fa045533d950e719c5813fe76491"
+            checksum: "de3170633a5977e4bc0f85d51632a0ac5933220370e2ebabac4a41970d4963b6"
         ),
         .binaryTarget(
             name: "MetaAdapter",
