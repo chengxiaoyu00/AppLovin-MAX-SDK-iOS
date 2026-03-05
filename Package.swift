@@ -17,12 +17,15 @@ let package = Package(
         .library(name: "AppLovinMediationInMobiAdapter",           targets: ["AppLovinMediationInMobiAdapter"]),
         .library(name: "GoogleAppLovinAdapter",                    targets: ["GoogleAppLovinAdapter"]),
         .library(name: "GoogleMintegralAdapterTarget",             targets: ["MintegralAdapterTarget"]),
+        .library(name: "AppLovinMediationPangleAdapter",             targets: ["AppLovinMediationPangleAdapter"]),
     ],
     dependencies: [
         .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", from: "13.0.0"),
         .package(url: "https://github.com/facebook/FBAudienceNetwork.git",                        from: "6.21.1"),
         .package(url: "https://github.com/Vungle/VungleAdsSDK-SwiftPackageManager.git",           from: "7.7.1"),
         .package(url: "https://github.com/Mintegral-official/MintegralAdSDK-Swift-Package.git",   from: "7.0.0"),
+        .package(url: "https://github.com/bytedance/AdsGlobalPackage.git", .exact("7.9.0-release.6"))
+ 
         
     ],
     targets: [
@@ -142,6 +145,16 @@ let package = Package(
             ],
             path: "Sources/MintegralAdapterTarget"
         ),
+        .target(
+              name: "AppLovinMediationPangleAdapter",
+              dependencies: [
+                .target(name: "AppLovinSDK"),
+                .target(name: "AppLovinMediationByteDanceAdapter"),
+                .product(name: "AdsGlobalPackage", package: "AdsGlobalPackage"),
+              ],
+              path: "Sources/ByteDance/ByteDanceAdapter",
+              publicHeadersPath: "."
+        ),
         .binaryTarget(
             name: "InMobiSDK",
             url: "https://dl.inmobi.com/inmobi-sdk/IM/InMobi-iOS-SDK-11.1.1.zip",
@@ -163,6 +176,11 @@ let package = Package(
            name: "VungleAdsSDK",
            url: "https://vungle2-cdn-prod.s3.amazonaws.com/sdks/ios/SwiftPackageManager/VungleAds-7.7.1.zip",
            checksum: "dca1a9084f4175ab2485046eb140c831b38cb6a35e36212b72691d119effbf75"
+        ),
+        .binaryTarget(
+            name: "AppLovinMediationByteDanceAdapter",
+            url: "https://artifacts.applovin.com/ios/com/applovin/mediation/bytedance-adapter/AppLovinMediationByteDanceAdapter-7.9.0.7.0.zip",
+            checksum: "fbbaa7dfd2a4ac6046acb37d526f70786595ad048ca2a1491bfd36166c6e7345"
         )
 
     ]
