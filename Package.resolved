@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "AdsGlobalPackage",
+        "repositoryURL": "https://github.com/bytedance/AdsGlobalPackage.git",
+        "state": {
+          "branch": null,
+          "revision": "e1361a81dc161ac7f3adc49f5e97bbe94f172a79",
+          "version": "7.9.0-release.6"
+        }
+      },
+      {
         "package": "FBAudienceNetwork",
         "repositoryURL": "https://github.com/facebook/FBAudienceNetwork.git",
         "state": {
