@@ -53,6 +53,17 @@ let package = Package(
             checksum: "a7f6701b24f67c55a0beabfcc06b31660590dceb410e3e6bae67b4fd4d817349"
         ),
 
+        // MARK: - admobe sdk
+        .target(
+            name: "AppLovinAdapterTarget",
+            dependencies: [
+                .target(name: "AppLovinAdapter"),
+                .target(name: "AppLovinSDK"),
+                .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
+            ],
+            path: "Sources/AppLovinAdapterTarget"
+        ),
+        
         // MARK: - Source-based Adapters (Sources/<Network>/)
 
         .target(
@@ -118,10 +129,31 @@ let package = Package(
                 .linkedLibrary("sqlite3"),
             ]
         ),
+        .target(
+            name: "MintegralAdapterTarget",
+            dependencies: [
+                .target(name: "MintegralAdapter"),
+                .product(name: "MintegralAdSDK", package: "MintegralAdSDK-Swift-Package"),
+                .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
+            ],
+            path: "Sources/MintegralAdapterTarget"
+        ),
         .binaryTarget(
             name: "InMobiSDK",
             url: "https://dl.inmobi.com/inmobi-sdk/IM/InMobi-iOS-SDK-11.1.1.zip",
             checksum: "578dd32285cc8cea05e04ef3ffd03ccf0c93bc010d1e3abbed28690fe0dfffb2"
+        ),
+        .binaryTarget(
+            name: "AppLovinAdapter",
+            url:
+                "https://dl.google.com/googleadmobadssdk/mediation/ios/applovin/AppLovinAdapter-13.6.0.0.zip",
+            checksum: "ac60839dd007e3b3b3f89b4f605b21d0b5096374bebe4dda6587dfa0229a0b2e"
+        ),
+        .binaryTarget(
+            name: "MintegralAdapter",
+            url:
+                "https://dl.google.com/googleadmobadssdk/mediation/ios/mintegral/MintegralAdapter-8.0.7.0.zip",
+            checksum: "d232222c8b9cc382cd934a02cf66e8ed81c135ae29ecfa45e87397f063f7e318"
         ),
 
     ]
