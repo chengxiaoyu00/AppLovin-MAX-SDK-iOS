@@ -18,14 +18,20 @@ let package = Package(
         .library(name: "GoogleAppLovinAdapter",                    targets: ["GoogleAppLovinAdapter"]),
         .library(name: "GoogleMintegralAdapterTarget",             targets: ["MintegralAdapterTarget"]),
         .library(name: "AppLovinMediationPangleAdapter",             targets: ["AppLovinMediationPangleAdapter"]),
+        .library(name: "PangleAdapterTarget",         targets: ["PangleAdapterTarget"]),
+        .library(name: "MetaAdapterTarget", targets: ["MetaAdapterTarget"]),
+        .library(
+            name: "LiftoffMonetizeAdapterTarget",
+            targets: ["LiftoffMonetizeAdapterTarget"]
+        )
     ],
     dependencies: [
         .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", from: "13.0.0"),
         .package(url: "https://github.com/facebook/FBAudienceNetwork.git",                        from: "6.21.1"),
         .package(url: "https://github.com/Vungle/VungleAdsSDK-SwiftPackageManager.git",           from: "7.7.1"),
-        .package(url: "https://github.com/Mintegral-official/MintegralAdSDK-Swift-Package.git",   from: "7.0.0"),
-        .package(url: "https://github.com/bytedance/AdsGlobalPackage.git", .exact("7.9.0-release.6"))
- 
+        .package(url: "https://github.com/Mintegral-official/MintegralAdSDK-Swift-Package.git",   from: "8.0.0"),
+        .package(url: "https://github.com/bytedance/AdsGlobalPackage.git", .exact("7.9.0-release.6")),
+        
         
     ],
     targets: [
@@ -155,6 +161,48 @@ let package = Package(
               path: "Sources/ByteDance/ByteDanceAdapter",
               publicHeadersPath: "."
         ),
+        .target(
+            name: "PangleAdapterTarget",
+            dependencies: [
+                .target(name: "PangleAdapter"),
+                .product(name: "AdsGlobalPackage", package: "AdsGlobalPackage"),
+                .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
+            ],
+            path: "Sources/PangleAdapterTarget"
+        ),
+        .target(
+            name: "MetaAdapterTarget",
+            dependencies: [
+                .target(name: "MetaAdapter"),
+                .product(name: "FBAudienceNetwork", package: "FBAudienceNetwork"),
+                .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
+            ],
+            path: "MetaAdapterTarget",
+            linkerSettings: [
+                .linkedFramework("AppTrackingTransparency")
+            ]
+        ),
+        .target(
+            name: "LiftoffMonetizeAdapterTarget",
+            dependencies: [
+                .target(name: "LiftoffMonetizeAdapter"),
+                .product(name: "VungleAdsSDK", package: "VungleAdsSDK-SwiftPackageManager"),
+                .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
+            ],
+            path: "LiftoffMonetizeAdapterTarget"
+        ),
+        .binaryTarget(
+            name: "LiftoffMonetizeAdapter",
+            url:
+                "https://dl.google.com/googleadmobadssdk/mediation/ios/liftoffmonetize/LiftoffMonetizeAdapter-7.7.1.0.zip",
+            checksum: "40608d891d891ad285efcc5e8f88f6f6cf92fa045533d950e719c5813fe76491"
+        ),
+        .binaryTarget(
+            name: "MetaAdapter",
+            url:
+                "https://dl.google.com/googleadmobadssdk/mediation/ios/meta/MetaAdapter-6.21.1.0.zip",
+            checksum: "33161d047091d71898da8ccef188748535b31a90e9b5c0d53d1b63d25fd9201a"
+        ),
         .binaryTarget(
             name: "InMobiSDK",
             url: "https://dl.inmobi.com/inmobi-sdk/IM/InMobi-iOS-SDK-11.1.1.zip",
@@ -181,7 +229,13 @@ let package = Package(
             name: "AppLovinMediationByteDanceAdapter",
             url: "https://artifacts.applovin.com/ios/com/applovin/mediation/bytedance-adapter/AppLovinMediationByteDanceAdapter-7.9.0.7.0.zip",
             checksum: "fbbaa7dfd2a4ac6046acb37d526f70786595ad048ca2a1491bfd36166c6e7345"
-        )
+        ),
+        .binaryTarget(
+            name: "PangleAdapter",
+            url:
+                "https://dl.google.com/googleadmobadssdk/mediation/ios/pangle/PangleAdapter-7.9.0.6.0.zip",
+            checksum: "4a18c3727955d3088b9d0afdb9744e0c82258e46d0aea721ecb2684f588d519b"
+        ),
 
     ]
 )
