@@ -7,7 +7,6 @@ let package = Package(
         .iOS(.v13)
     ],
     products: [
-        .library(name: "AppLovinSDK",                              targets: ["AppLovinSDKResources"]),
         .library(name: "AppLovinMediationGoogleAdapter",           targets: ["AppLovinMediationGoogleAdapter"]),
         .library(name: "AppLovinMediationGoogleAdManagerAdapter",  targets: ["AppLovinMediationGoogleAdManagerAdapter"]),
         .library(name: "AppLovinMediationFacebookAdapter",         targets: ["AppLovinMediationFacebookAdapter"]),
@@ -18,7 +17,7 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", from: "13.0.0"),
         .package(url: "https://github.com/facebook/FBAudienceNetwork.git",                        from: "6.21.1"),
-        .package(url: "https://github.com/Vungle/VungleAdsSDK-SwiftPackageManager.git",           from: "7.0.0"),
+        .package(url: "https://github.com/Vungle/VungleAdsSDK-SwiftPackageManager.git",           from: "7.7.1"),
         .package(url: "https://github.com/Mintegral-official/MintegralAdSDK-Swift-Package.git",   from: "7.0.0"),
     ],
     targets: [
