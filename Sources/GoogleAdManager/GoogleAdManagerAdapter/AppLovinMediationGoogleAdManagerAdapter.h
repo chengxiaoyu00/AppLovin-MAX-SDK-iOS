@@ -5,4 +5,4 @@
 //  Copyright © 2025 AppLovin. All rights reserved.
 //
 
-#import <AppLovinMediationGoogleAdManagerAdapter/ALGoogleAdManagerMediationAdapter.h>
+#import "ALGoogleAdManagerMediationAdapter.h"
