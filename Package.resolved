@@ -45,15 +45,6 @@
           "revision": "13b248eaa73b7826f0efb1bcf455e251d65ecb1b",
           "version": "3.1.0"
         }
-      },
-      {
-        "package": "VungleAdsSDK",
-        "repositoryURL": "https://github.com/Vungle/VungleAdsSDK-SwiftPackageManager.git",
-        "state": {
-          "branch": null,
-          "revision": "f38ec7eaf8f84e50c194595620fb3c4e325d2f31",
-          "version": "7.7.1"
-        }
       }
     ]
   },

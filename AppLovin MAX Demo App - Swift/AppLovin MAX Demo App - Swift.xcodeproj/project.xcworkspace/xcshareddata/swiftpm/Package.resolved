@@ -2,6 +2,15 @@
   "originHash" : "190f46d3dc7ccce92bcd61dc383986a4cd44b61b5c32ce69f10feadd7e996c92",
   "pins" : [
     {
+      "identity" : "adsglobalpackage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/bytedance/AdsGlobalPackage.git",
+      "state" : {
+        "revision" : "e1361a81dc161ac7f3adc49f5e97bbe94f172a79",
+        "version" : "7.9.0-release.6"
+      }
+    },
+    {
       "identity" : "fbaudiencenetwork",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/facebook/FBAudienceNetwork.git",
@@ -15,8 +24,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Mintegral-official/MintegralAdSDK-Swift-Package.git",
       "state" : {
-        "revision" : "b483374ae72193a547f97055132ac9d0a3a5cb7f",
-        "version" : "7.7.9"
+        "revision" : "998c72bbc49ee72b8a5c15c03ac8ea107f947971",
+        "version" : "8.0.7"
       }
     },
     {

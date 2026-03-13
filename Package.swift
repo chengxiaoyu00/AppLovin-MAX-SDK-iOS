@@ -12,23 +12,20 @@ let package = Package(
         .library(name: "AppLovinMediationGoogleAdapter",           targets: ["AppLovinMediationGoogleAdapter"]),
         .library(name: "AppLovinMediationGoogleAdManagerAdapter",  targets: ["AppLovinMediationGoogleAdManagerAdapter"]),
         .library(name: "AppLovinMediationFacebookAdapter",         targets: ["AppLovinMediationFacebookAdapter"]),
-        .library(name: "AppLovinMediationVungleAdapter",           targets: ["AppLovinMediationVungleAdapter"]),
+        // .library(name: "AppLovinMediationVungleAdapter",           targets: ["AppLovinMediationVungleAdapter"]),
         .library(name: "AppLovinMediationMintegralAdapter",        targets: ["AppLovinMediationMintegralAdapter"]),
         .library(name: "AppLovinMediationInMobiAdapter",           targets: ["AppLovinMediationInMobiAdapter"]),
         .library(name: "GoogleAppLovinAdapter",                    targets: ["GoogleAppLovinAdapter"]),
         .library(name: "GoogleMintegralAdapterTarget",             targets: ["GoogleMintegralAdapterTarget"]),
-        .library(name: "AppLovinMediationPangleAdapter",             targets: ["AppLovinMediationPangleAdapter"]),
-        .library(name: "PangleAdapterTarget",         targets: ["PangleAdapterTarget"]),
-        .library(name: "MetaAdapterTarget", targets: ["MetaAdapterTarget"]),
-        .library(
-            name: "LiftoffMonetizeAdapterTarget",
-            targets: ["LiftoffMonetizeAdapterTarget"]
-        )
+        .library(name: "AppLovinMediationPangleAdapter",           targets: ["AppLovinMediationPangleAdapter"]),
+        .library(name: "PangleAdapterTarget",                      targets: ["PangleAdapterTarget"]),
+        .library(name: "MetaAdapterTarget",                        targets: ["MetaAdapterTarget"]),
+        // .library(name: "LiftoffMonetizeAdapterTarget",             targets: ["LiftoffMonetizeAdapterTarget"])
     ],
     dependencies: [
         .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", from: "13.0.0"),
         .package(url: "https://github.com/facebook/FBAudienceNetwork.git",                        from: "6.21.1"),
-        .package(url: "https://github.com/Vungle/VungleAdsSDK-SwiftPackageManager.git",           from: "7.7.1"),
+        // .package(url: "https://github.com/Vungle/VungleAdsSDK-SwiftPackageManager.git",           from: "7.7.1"),
         .package(url: "https://github.com/Mintegral-official/MintegralAdSDK-Swift-Package.git",    .exact("8.0.7")),
         .package(url: "https://github.com/bytedance/AdsGlobalPackage.git", .exact("7.9.0-release.6")),
         
@@ -109,15 +106,15 @@ let package = Package(
             publicHeadersPath: "."
         ),
 
-        .target(
-            name: "AppLovinMediationVungleAdapter",
-            dependencies: [
-                .target(name: "AppLovinSDK"),
-                .product(name: "VungleAdsSDK", package: "VungleAdsSDK-SwiftPackageManager"),
-            ],
-            path: "Sources/Vungle/VungleAdapter",
-            publicHeadersPath: "."
-        ),
+        // .target(
+        //     name: "AppLovinMediationVungleAdapter",
+        //     dependencies: [
+        //         .target(name: "AppLovinSDK"),
+        //         .product(name: "VungleAdsSDK", package: "VungleAdsSDK-SwiftPackageManager"),
+        //     ],
+        //     path: "Sources/Vungle/VungleAdapter",
+        //     publicHeadersPath: "."
+        // ),
 
         .target(
             name: "AppLovinMediationMintegralAdapter",
@@ -181,21 +178,21 @@ let package = Package(
                 .linkedFramework("AppTrackingTransparency")
             ]
         ),
-        .target(
-            name: "LiftoffMonetizeAdapterTarget",
-            dependencies: [
-                .target(name: "LiftoffMonetizeAdapter"),
-                .product(name: "VungleAdsSDK", package: "VungleAdsSDK-SwiftPackageManager"),
-                .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
-            ],
-            path: "Sources/LiftoffMonetizeAdapterTarget"
-        ),
-        .binaryTarget(
-            name: "LiftoffMonetizeAdapter",
-            url:
-                "https://dl.google.com/googleadmobadssdk/mediation/ios/liftoffmonetize/LiftoffMonetizeAdapter-7.7.1.0.zip",
-            checksum: "de3170633a5977e4bc0f85d51632a0ac5933220370e2ebabac4a41970d4963b6"
-        ),
+        // .target(
+        //     name: "LiftoffMonetizeAdapterTarget",
+        //     dependencies: [
+        //         .target(name: "LiftoffMonetizeAdapter"),
+        //         .product(name: "VungleAdsSDK", package: "VungleAdsSDK-SwiftPackageManager"),
+        //         .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
+        //     ],
+        //     path: "Sources/LiftoffMonetizeAdapterTarget"
+        // ),
+        // .binaryTarget(
+        //     name: "LiftoffMonetizeAdapter",
+        //     url:
+        //         "https://dl.google.com/googleadmobadssdk/mediation/ios/liftoffmonetize/LiftoffMonetizeAdapter-7.7.1.0.zip",
+        //     checksum: "de3170633a5977e4bc0f85d51632a0ac5933220370e2ebabac4a41970d4963b6"
+        // ),
         .binaryTarget(
             name: "MetaAdapter",
             url:

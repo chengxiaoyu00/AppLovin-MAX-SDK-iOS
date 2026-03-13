@@ -32,6 +32,8 @@ s.dependency 'MintegralAdSDK/BidSplashAd', '= {ADAPTER_SDK_VERSION}'
 s.dependency 'AppLovinSDK', '>= 13.0.0'
 s.swift_version = '5.0'
 
+s.user_target_xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
+
 s.description = <<-DESC
 
 AppLovin makes technologies that help businesses of every size connect to their ideal customers. The company provides end-to-end software and AI solutions for businesses to reach, monetize, and grow their global audiences. For more information about AppLovin, visit: www.applovin.com.
